@@ -1,0 +1,19 @@
+{
+    "name": "messi/eval_php",
+    "description": "eval php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MessineB",
+            "email": "messinebelarousi@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^6.0"
+    }
+}
