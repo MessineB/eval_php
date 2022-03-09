@@ -16,6 +16,7 @@
         <?php for ($comment_number=0 ;  $comment_number < count($post_responses) ; $comment_number++ ) { ?>
         <p>  <?=  $post_responses[$comment_number]->getMessage();  ?>
         <p>Commentaire ajouté le : <?=  $post_responses[$comment_number]->getDate_ajout();  ?> </p>
+        <br>
 
 
         <?php } ?>

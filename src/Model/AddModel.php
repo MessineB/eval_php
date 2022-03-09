@@ -6,5 +6,5 @@ use PDO;
 use App\database\Database;
 
 Class AddModel {
-    
+
 }

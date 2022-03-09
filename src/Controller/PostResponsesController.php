@@ -8,6 +8,7 @@ use App\Controller\AbstractController;
 
 class PostResponsesController extends AbstractController
 {
+   
     public function index()
     {
         $postModel = new PostModel();
@@ -25,4 +26,5 @@ class PostResponsesController extends AbstractController
             
         ]);
     }
+    
 }

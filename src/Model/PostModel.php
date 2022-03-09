@@ -47,7 +47,13 @@ class PostModel{
         return $result;
     }
 
-    
+    public function createPost($title , $content , $hashtag ) {
+        $sql = "INSERT INTO post (title,content,hashtag) VALUES ( '$title','$content','$hashtag')" ;
+        $pdoStatement = $this->pdo->query($sql);
+        $result = $pdoStatement->fetchObject(self::class);
+        return $result;
+        
+    }
 
     public function getId()
     {
