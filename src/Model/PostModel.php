@@ -41,19 +41,13 @@ class PostModel{
     }
 
     public function findPost($id) {
-        $sql = 'SELECT * FROM ' . self::TABLE_NAME . ' WHERE id = '.$id;
+        $sql = 'SELECT * FROM post WHERE id ='.$id;
         $pdoStatement = $this->pdo->query($sql);
         $result = $pdoStatement->fetchObject(self::class);
         return $result;
     }
 
-    public function createPost($title , $content , $hashtag ) {
-        $sql = "INSERT INTO post (title,content,hashtag) VALUES ( '$title','$content','$hashtag')" ;
-        $pdoStatement = $this->pdo->query($sql);
-        $result = $pdoStatement->fetchObject(self::class);
-        return $result;
-        
-    }
+    
 
     public function getId()
     {

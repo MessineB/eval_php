@@ -57,7 +57,7 @@ class ResponsesModel{
     }
 
     public function findbyId($id) {
-        $sql = 'SELECT * FROM `responses` WHERE `post_id` = '.$id .' ';
+        $sql = 'SELECT * FROM `responses` WHERE `post_id` = '.$id .' AND status = 1 ';
         $pdoStatement = $this->pdo->query($sql);
         $result = $pdoStatement->fetchAll(PDO::FETCH_CLASS,self::class);
         return $result;

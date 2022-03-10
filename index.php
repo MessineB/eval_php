@@ -13,7 +13,7 @@ class Application
     const AUTHORIZED_PAGES = [
         'post' => [
             'controller' => 'PostResponsesController',
-            'method' => 'index'
+            'method' => 'index' 
         ],
         'status' => [
             'controller' => 'StatusController',
@@ -23,6 +23,7 @@ class Application
             'controller' => 'ErrorController',
             'method' => 'error404'
         ],
+        
     ];
 
     const DEFAULT_ROUTE = 'post';
