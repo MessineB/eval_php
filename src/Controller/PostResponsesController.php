@@ -35,7 +35,7 @@ class PostResponsesController extends AbstractController
         $this->render('post.php', [
             'posts' => $posts,
             'responses' => $responses,
-            'formulaire' => $form
+            
         ]);
     }
     

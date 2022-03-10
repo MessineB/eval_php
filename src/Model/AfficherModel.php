@@ -5,16 +5,16 @@ namespace App\Model;
 use PDO;
 use App\database\Database;
 
-Class ModifModel {
+Class AfficherModel {
     public function __construct()
     {
         $database = new Database();
         $this->pdo = $database->getPDO();
     }
-    public function modifpost($id) {
+    public function affichepost($id) {
 
         $sql = 'UPDATE post
-        SET status = 0
+        SET status = 1
         WHERE id = '.$id.';
 ';
 $pdoStatement = $this->pdo->query($sql);

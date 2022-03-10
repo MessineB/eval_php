@@ -32,6 +32,23 @@ class PostModel{
                 ,`content`
                 ,`hashtag`
                 ,`status`
+                FROM ' . self::TABLE_NAME . ' WHERE status=1
+                ORDER BY `id` ASC;
+        ';
+        $pdoStatement = $this->pdo->query($sql);
+        $result = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
+        return $result;
+    }
+
+    public function findAllPosts()
+    {
+        $sql = 'SELECT
+                `id`
+                ,`date_ajout`
+                ,`title`
+                ,`content`
+                ,`hashtag`
+                ,`status`
                 FROM ' . self::TABLE_NAME . '
                 ORDER BY `id` ASC;
         ';
@@ -41,7 +58,7 @@ class PostModel{
     }
 
     public function findPost($id) {
-        $sql = 'SELECT * FROM post WHERE id ='.$id;
+        $sql = 'SELECT * FROM post WHERE id ='.$id.' AND status = 1';
         $pdoStatement = $this->pdo->query($sql);
         $result = $pdoStatement->fetchObject(self::class);
         return $result;

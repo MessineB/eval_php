@@ -17,8 +17,10 @@
         <p>  <?=  $post_responses[$comment_number]->getMessage();  ?>
         <p>Commentaire ajouté le : <?=  $post_responses[$comment_number]->getDate_ajout();  ?> </p>
         <br>
-
-
         <?php } ?>
+        <form method="post">
+        <input type="text" name="message" placeholder="Message du commentaire"> 
+        <input type="submit" name="submit" placeholder ="Envoyé commentaire">
+        </form>
 </body>
 </html>

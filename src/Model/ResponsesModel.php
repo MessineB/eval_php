@@ -47,7 +47,24 @@ class ResponsesModel{
                 ,`post_id`
                 ,`message`
                 ,`status`
-                FROM ' . self::TABLE_NAME . '  WHERE `id` = :id
+                FROM ' . self::TABLE_NAME . '  WHERE `id` = :id AND status=1
+                ORDER BY `id` ASC;
+        ';
+
+        $pdoStatement = $this->pdo->query($sql);
+        $result = $pdoStatement->fetchObject(self::class);
+        return $result;
+    }
+
+    public function findAllResponse($id)
+    {
+        $sql = 'SELECT
+                `id`
+                ,`date_ajout`
+                ,`post_id`
+                ,`message`
+                ,`status`
+                FROM ' . self::TABLE_NAME . '  WHERE `id` = :id 
                 ORDER BY `id` ASC;
         ';
 

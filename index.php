@@ -33,6 +33,16 @@ class Application
             'method' => 'delete' 
         ],
         
+        
+        'modif' => [
+            'controller' => 'ModifController',
+            'method' => 'modif' 
+        ],
+        'affiche' => [
+            'controller' => 'AfficherController',
+            'method' => 'affiche' 
+        ],
+        
     ];
 
     const DEFAULT_ROUTE = 'post';

@@ -21,8 +21,15 @@
     <h1><?= $post->getTitle() ?></h1> 
        <p> <?= $post->getContent() ?> </p> </a>
        <h5>Ajouté le : <?= $post->getDate_ajout() ?> </h5>
+       <?php if ( $post->getStatus()==0 ) { ?>
+        <a href="?page=affiche&post_id= <?= $post->getId() ?>"> Affiché le post </a>
+      <?php } ?>  
+      <?php if ( $post->getStatus()== 1 ) {?>
+        <a href="?page=modif&post_id= <?= $post->getId() ?>"> Caché le post </a>
+        <?php } ?>
        <br>
-       <a href="?page=delete&post_id= <?= $post->getId() ?>"> Delete </a>
+       <a href="?page=delete&post_id= <?= $post->getId() ?>"> Delete le post </a>
+       
     </div>
     <?php endforeach ?>
         
