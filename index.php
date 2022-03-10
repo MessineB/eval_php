@@ -23,6 +23,15 @@ class Application
             'controller' => 'ErrorController',
             'method' => 'error404'
         ],
+        'admin' => [
+            'controller' => 'AdminController',
+            'method' => 'index' 
+        ],
+        
+        'delete' => [
+            'controller' => 'DeleteController',
+            'method' => 'delete' 
+        ],
         
     ];
 
