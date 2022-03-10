@@ -20,8 +20,8 @@ class AdminController extends AbstractController
             $formModel = new AddModel();
             $form = $formModel->createpost($title , $content , $hashtag);
         
-        
         }
+        
         $postModel = new PostModel();
         $responsesModel = new ResponsesModel();
         $posts = $postModel->findAllPosts();

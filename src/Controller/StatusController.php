@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Model\PostModel;
 use App\Model\ResponsesModel;
+use App\Model\AddCommentModel;
 use App\Controller\AbstractController;
 
 class StatusController extends AbstractController
@@ -19,6 +20,14 @@ class StatusController extends AbstractController
         $post_find = $postModel->findPost($id);
 
         $post_responses = $responsesModel->findbyId($id);
+
+    if ( $_POST) {
+        $message = $_POST["message"];
+        //var_dump($title);
+        $formcommentModel = new AddCommentModel();
+        $formcomment = $formcommentModel->createcomment($message , $id);
+      
+    }
 
         $this->render('status.php', [
             'posts' => $posts,
