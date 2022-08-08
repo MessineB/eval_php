@@ -1,0 +1,52 @@
+body{
+    background-color: lightgray;
+}
+
+.espace-com {
+    padding-top: 50px;
+}
+
+.post {
+    display: flex;
+    
+}
+.avatar {
+    width: 40%;
+}
+.post {
+    background-color: white;
+    margin: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-left: 50px;
+    padding-right: 90px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom: 50px;
+}
+.form{
+ height: 100px;
+}
+.form-div {
+    padding-left: 40%;
+    padding-top: 10%;
+}
+.image {
+    padding-left: 50px;
+    padding-right: 70px;
+}
+nav {
+    background-color: lightcyan;
+}
+.content {
+    width: 50%;
+}
+.media {
+    margin-top: 20px;
+}
+.comm-img {
+    margin-right: 20px;
+}
+.d-flex {
+    display: -webkit-box !important;
+}
